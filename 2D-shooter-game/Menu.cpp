@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "Menu.h"
 #include <iostream>
-#include "Game.h"
 
 using namespace std;
 using namespace sf;
@@ -9,7 +8,7 @@ using namespace sf;
 Menu::Menu(float width, float height)
 {
 	if (!font.loadFromFile("Fonts/arial.ttf") ){
-		cout<<"ERROR";
+		cout << "ERROR";
 	};
 	menu[0].setFont(font);
 	menu[0].setCharacterSize(50);

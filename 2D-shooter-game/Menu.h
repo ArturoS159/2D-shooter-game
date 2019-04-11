@@ -1,7 +1,7 @@
 #pragma once
 #define MENU_NUMBERS 5
 #include "SFML/Graphics.hpp"
-
+#include "GameSettings.h"
 
 using namespace std;
 using namespace sf;
