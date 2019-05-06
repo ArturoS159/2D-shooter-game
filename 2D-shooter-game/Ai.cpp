@@ -7,10 +7,10 @@ Ai::Ai(){
 
 }
 
-void Ai::do_it(Player ai,Player player)
-{
-	cout << player.getCordinates() << endl;
+//void Ai::do_it(Player ai,Player player)
+//{
+	//cout << player.getCordinates() << endl;
 	
 
-}
+//}
 

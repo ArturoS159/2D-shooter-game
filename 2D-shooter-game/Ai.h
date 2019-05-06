@@ -6,6 +6,6 @@ class Ai
 public:
 	Ai();
 
-	void do_it(Player ai, Player player);
+//	void do_it(Player ai, Player player);
 };
 
