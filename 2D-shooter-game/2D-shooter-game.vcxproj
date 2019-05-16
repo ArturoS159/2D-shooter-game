@@ -167,6 +167,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Ai.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="GameSettings.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="SoundC.h" />
@@ -174,6 +176,8 @@
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Ai.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="SoundC.cpp" />

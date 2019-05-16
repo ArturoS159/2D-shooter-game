@@ -5,6 +5,7 @@
 #define SCREEN_COLOR 32
 #define GAME_NAME "NAZWA GRY"
 #define FPS 60
-#define PLAYER_SPEED 0.8
+#define PLAYER_SPEED 2.1f
+#define BULLET_SPEED 5.f
 
 
