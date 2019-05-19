@@ -5,7 +5,9 @@ class Ai
 {
 public:
 	Ai();
-
-//	void do_it(Player ai, Player player);
+	void doIt(Player &computer, Player &player);
+private:
+	Player player;
+	Player computer;
 };
 

@@ -2,6 +2,7 @@
 #include "Player.h"
 #include <random>
 #include <iostream>
+#include "GameSettings.h"
 
 using namespace std;
 
@@ -14,12 +15,29 @@ Player::Player(){
 	mt19937 mt(rd());
 	const uniform_real_distribution<float> rand(100, 500);
 	this->sprite.setPosition(rand(mt), rand(mt));
-	this->dir = sf::Vector2f(0, 0);
+	this->dir = sf::Vector2f(0, -BULLET_SPEED);
 }
 
 void Player::draw(sf::RenderWindow& window)
 {
 	window.draw(this->sprite);
+}
+
+void Player::checkColisionWall()
+{
+	if (sprite.getPosition().x+ texture.getSize().x/2 > SCREEN_WIDTH) {
+		sprite.setPosition(sprite.getPosition().x - PLAYER_SPEED, sprite.getPosition().y);
+		
+	}else if (sprite.getPosition().x - texture.getSize().x / 2 < 0) {
+		sprite.setPosition(sprite.getPosition().x + PLAYER_SPEED, sprite.getPosition().y);
+	}
+	if (sprite.getPosition().y + texture.getSize().y / 2 > SCREEN_HEIGHT) {
+		sprite.setPosition(sprite.getPosition().x, sprite.getPosition().y - PLAYER_SPEED);
+	}
+	else if (sprite.getPosition().y - texture.getSize().y / 2 < 0) {
+		sprite.setPosition(sprite.getPosition().x, sprite.getPosition().y + PLAYER_SPEED);
+	}
+
 }
 
 

@@ -11,6 +11,7 @@ public:
 	~Bullet();
 	void fire(Player player);
 	void draw(sf::RenderWindow &window);
+	bool checkColisionWall();
 	
 private:
 	sf::Vector2f dir;

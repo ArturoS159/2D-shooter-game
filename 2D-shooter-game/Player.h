@@ -13,6 +13,7 @@ public:
 	int getX();
 	int getY();
 	void draw(sf::RenderWindow &window);
+	void checkColisionWall();
 	sf::Vector2f getDir();
 private:
 	sf::Texture texture;
