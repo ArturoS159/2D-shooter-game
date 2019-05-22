@@ -9,13 +9,14 @@ using namespace std;
 Player::Player(){
 	this->texture.loadFromFile("Images/soldier.png");
 	this->sprite.setTexture(this->texture);
-	this->sprite.setOrigin(32, 32);
+	this->sprite.setOrigin(texture.getSize().x/2, texture.getSize().y/2);
 
 	random_device rd;
 	mt19937 mt(rd());
 	const uniform_real_distribution<float> rand(100, 500);
 	this->sprite.setPosition(rand(mt), rand(mt));
 	this->dir = sf::Vector2f(0, -BULLET_SPEED);
+	this->hp = 100;
 }
 
 void Player::draw(sf::RenderWindow& window)
@@ -39,7 +40,6 @@ void Player::checkColisionWall()
 	}
 
 }
-
 
 void Player::move(sf::Vector2f dir) {
 	if (dir.x >= 0 && dir.y == 0){
@@ -71,6 +71,25 @@ int Player::getY()
 	return this->sprite.getPosition().y;
 }
 
+int Player::getSizeX()
+{
+	return this->texture.getSize().x;
+}
+int Player::getSizeY()
+{
+	return this->texture.getSize().y;
+}
+
 sf::Vector2f Player::getDir(){
 	return this->dir;
+}
+
+void Player::setHp(int hp)
+{
+	this->hp = hp;
+}
+
+int Player::getHp()
+{
+	return hp;
 }

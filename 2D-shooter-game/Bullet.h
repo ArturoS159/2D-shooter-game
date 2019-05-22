@@ -12,7 +12,8 @@ public:
 	void fire(Player player);
 	void draw(sf::RenderWindow &window);
 	bool checkColisionWall();
-	
+	int getX();
+	int getY();
 private:
 	sf::Vector2f dir;
 	sf::CircleShape bullet;

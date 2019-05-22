@@ -7,5 +7,7 @@
 #define FPS 60
 #define PLAYER_SPEED 2.1f
 #define BULLET_SPEED 5.f
+#define SPIDER_SPEED 0.5f
+#define SPIDER_POWER 10
 
 

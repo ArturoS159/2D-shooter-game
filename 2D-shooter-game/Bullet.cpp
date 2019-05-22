@@ -41,3 +41,13 @@ bool Bullet::checkColisionWall()
 	}
 	return false;
 }
+
+int Bullet::getX()
+{
+	return bullet.getPosition().x;
+}
+
+int Bullet::getY()
+{
+	return bullet.getPosition().y;
+}
