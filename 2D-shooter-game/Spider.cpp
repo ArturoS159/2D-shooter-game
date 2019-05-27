@@ -77,6 +77,7 @@ void Spider::draw(sf::RenderWindow& window)
 	window.draw(this->sprite);
 }
 
+
 int Spider::checkColision(vector<Bullet> bulletsList)
 {
 	for (int i = 0; i < bulletsList.size(); i++) {
