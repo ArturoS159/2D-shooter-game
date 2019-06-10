@@ -7,15 +7,14 @@ using namespace sf;
 class Bullet
 {
 public:
-	Bullet(sf::Vector2f pos, Player player);
+	Bullet(Vector2f pos, Player player);
 	~Bullet();
 	void fire(Player player);
-	void draw(sf::RenderWindow &window);
+	void draw(RenderWindow& window);
 	bool checkColisionWall();
 	int getX();
 	int getY();
 private:
-	sf::Vector2f dir;
-	sf::CircleShape bullet;
+	Vector2f dir;
+	CircleShape bullet;
 };
-

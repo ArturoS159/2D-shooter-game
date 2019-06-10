@@ -2,7 +2,6 @@
 #include "SoundManager.h"
 
 
-
 void SoundManager::play(string musicName)
 {
 	music.openFromFile("Sounds/" + musicName);

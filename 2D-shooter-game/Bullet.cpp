@@ -1,10 +1,10 @@
 #include "pch.h"
 #include "Bullet.h"
 #include "Player.h"
-#include <iostream>
+#include "GameSettings.h"
 
 
-Bullet::Bullet(sf::Vector2f pos,Player player)
+Bullet::Bullet(Vector2f pos, Player player)
 {
 	this->bullet.setRadius(5);
 	this->bullet.setFillColor(Color::Blue);
@@ -22,21 +22,27 @@ void Bullet::fire(Player player)
 	this->bullet.move(this->dir);
 }
 
-void Bullet::draw(sf::RenderWindow & window)
+void Bullet::draw(RenderWindow& window)
 {
 	window.draw(this->bullet);
 }
 
 bool Bullet::checkColisionWall()
 {
-	if (bullet.getPosition().x > SCREEN_WIDTH) {
-		return true;
-	}else if (bullet.getPosition().x < 0) {
+	if (bullet.getPosition().x > SCREEN_WIDTH)
+	{
 		return true;
 	}
-	if (bullet.getPosition().y > SCREEN_HEIGHT) {
+	if (bullet.getPosition().x < 0)
+	{
 		return true;
-	}else if (bullet.getPosition().y < 0) {
+	}
+	if (bullet.getPosition().y > SCREEN_HEIGHT)
+	{
+		return true;
+	}
+	if (bullet.getPosition().y < 0)
+	{
 		return true;
 	}
 	return false;
